@@ -46,7 +46,7 @@ if [ "$MODE" = "uninstall" ]; then
     PRESET_DST="$DSH_HOME/.agent-presets/troubleshooting"
     if [ -e "$PRESET_DST" ]; then
         mv "$PRESET_DST" "${PRESET_DST}.bak-$TS"
-        echo "  移除 preset: engineering → .bak-$TS"
+        echo "  移除 preset: troubleshooting → .bak-$TS"
     else
         echo "  preset 不存在，跳过"
     fi
@@ -62,7 +62,7 @@ echo "== 1/1 agent preset（含 skills/）→ $DSH_HOME/.agent-presets/troublesh
 PRESET_DST="$DSH_HOME/.agent-presets/troubleshooting"
 if [ -e "$PRESET_DST" ]; then
     mv "$PRESET_DST" "$PRESET_DST.bak-$TS"
-    echo "  备份: engineering → engineering.bak-$TS"
+    echo "  备份: troubleshooting → troubleshooting.bak-$TS"
 fi
 mkdir -p "$PRESET_DST"
 cp -r "$PRESET_SRC/." "$PRESET_DST/"
